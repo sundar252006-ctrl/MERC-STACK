@@ -1,0 +1,90 @@
+{
+  "recipes": [
+    {
+      "id": 1,
+      "name": "Chicken Biryani",
+      "category": "Non-Vegetarian",
+      "cuisine": "Indian",
+      "preparationTime": "45 minutes",
+      "difficulty": "Medium",
+      "ingredients": [
+        "Basmati Rice",
+        "Chicken",
+        "Onions",
+        "Tomatoes",
+        "Yogurt",
+        "Spices"
+      ],
+      "rating": 4.8,
+      "isFavorite": true
+    },
+    {
+      "id": 2,
+      "name": "Masala Dosa",
+      "category": "Vegetarian",
+      "cuisine": "South Indian",
+      "preparationTime": "30 minutes",
+      "difficulty": "Easy",
+      "ingredients": [
+        "Rice Batter",
+        "Potatoes",
+        "Onions",
+        "Mustard Seeds",
+        "Curry Leaves"
+      ],
+      "rating": 4.7,
+      "isFavorite": true
+    },
+    {
+      "id": 3,
+      "name": "Pizza",
+      "category": "Vegetarian",
+      "cuisine": "Italian",
+      "preparationTime": "25 minutes",
+      "difficulty": "Easy",
+      "ingredients": [
+        "Pizza Base",
+        "Tomato Sauce",
+        "Cheese",
+        "Capsicum",
+        "Olives"
+      ],
+      "rating": 4.5,
+      "isFavorite": false
+    },
+    {
+      "id": 4,
+      "name": "Paneer Butter Masala",
+      "category": "Vegetarian",
+      "cuisine": "Indian",
+      "preparationTime": "35 minutes",
+      "difficulty": "Medium",
+      "ingredients": [
+        "Paneer",
+        "Tomatoes",
+        "Butter",
+        "Cream",
+        "Spices"
+      ],
+      "rating": 4.6,
+      "isFavorite": true
+    },
+    {
+      "id": 5,
+      "name": "Chocolate Cake",
+      "category": "Dessert",
+      "cuisine": "Bakery",
+      "preparationTime": "60 minutes",
+      "difficulty": "Medium",
+      "ingredients": [
+        "Flour",
+        "Cocoa Powder",
+        "Sugar",
+        "Eggs",
+        "Butter"
+      ],
+      "rating": 4.9,
+      "isFavorite": true
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Recipes List</title>
+  <link rel ="stylesheet" href="style.css">
+  <style>
+    label {
+      display: block;
+      margin-top: 8px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Recipes</h1>
+  <ul id="recipe-list"></ul>
+
+  <h2>Add New Recipe</h2>
+  <form id="recipe-form">
+    <label>
+      Name: <input type="text" id="name" required />
+    </label>
+    <label>
+      Cuisine: <input type="text" id="cuisine" required />
+    </label>
+    <label>
+      Preparation Time: <input type="text" id="prepTime" required placeholder="e.g. 40 minutes" />
+    </label>
+    <button type="submit">Add Recipe</button>
+  </form>
+
+  <script>
+    // Initial data (could come from JSON file fetch)
+    const recipes = [
+      { name: "Chicken Biryani", cuisine: "Indian", preparationTime: "45 minutes" },
+      { name: "Masala Dosa", cuisine: "South Indian", preparationTime: "30 minutes" },
+      { name: "Pizza", cuisine: "Italian", preparationTime: "25 minutes" },
+      { name: "Paneer Butter Masala", cuisine: "Indian", preparationTime: "35 minutes" },
+      { name: "Chocolate Cake", cuisine: "Bakery", preparationTime: "60 minutes" },
+    ];
+
+    const list = document.getElementById('recipe-list');
+
+    function renderRecipes() {
+      list.innerHTML = ''; // Clear existing list
+      recipes.forEach(recipe => {
+        const li = document.createElement('li');
+        li.textContent = `${recipe.name} (${recipe.cuisine}) - Prep Time: ${recipe.preparationTime}`;
+        list.appendChild(li);
+      });
+    }
+
+    // Render initial list
+    renderRecipes();
+
+    // Handle form submission
+    document.getElementById('recipe-form').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent page reload
+
+      // Get input values
+      const name = document.getElementById('name').value.trim();
+      const cuisine = document.getElementById('cuisine').value.trim();
+      const prepTime = document.getElementById('prepTime').value.trim();
+
+      if (name && cuisine && prepTime) {
+        // Add new recipe to array
+        recipes.push({ name, cuisine, preparationTime: prepTime });
+
+        // Re-render list
+        renderRecipes();
+
+        // Reset form
+        this.reset();
+      }
+    });
+  </script>
+</body>
+</html>
